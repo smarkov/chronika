@@ -1,0 +1,9 @@
+# Secrets & local artifacts
+.env
+*.sql
+*.sql.gz
+app/storage/uploads/
+vendor/
+app/config/db.php
+
+chronika.code-workspace
