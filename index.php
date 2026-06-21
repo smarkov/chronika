@@ -1,14 +1,14 @@
 <?php
 session_start();
 
-require_once __DIR__ . '/../app/config/db.php';
-require_once __DIR__ . '/../app/config/auth.php';
-require_once __DIR__ . '/../app/models/Entry.php';
-require_once __DIR__ . '/../app/models/Media.php';
-require_once __DIR__ . '/../app/controllers/AuthController.php';
-require_once __DIR__ . '/../app/controllers/EntryController.php';
-require_once __DIR__ . '/../app/controllers/UploadController.php';
-require_once __DIR__ . '/../app/controllers/SearchController.php';
+require_once __DIR__ . '/app/config/db.php';
+require_once __DIR__ . '/app/config/auth.php';
+require_once __DIR__ . '/app/models/Entry.php';
+require_once __DIR__ . '/app/models/Media.php';
+require_once __DIR__ . '/app/controllers/AuthController.php';
+require_once __DIR__ . '/app/controllers/EntryController.php';
+require_once __DIR__ . '/app/controllers/UploadController.php';
+require_once __DIR__ . '/app/controllers/SearchController.php';
 
 $route = $_GET['route'] ?? 'dashboard';
 
