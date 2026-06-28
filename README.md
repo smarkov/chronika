@@ -40,19 +40,25 @@ It includes the `app` and and an `sql/schema.sql`, for setting up the DB on the 
         └── js
 ```
 - `./` — public web root
-- `app/` — application code and storage
+- `index.php` -- entry point
+- `app/` — application code and storage (MCV)
+- `assets/` -- html stuff
 - `sql/schema.sql` — database schema
 
 ## Setup
 
-1. Import the schema into MySQL:
-   - `mysql -u root -p < sql/schema.sql`
+1. Create the layout of the website under `~/domains/website_name/`, to include `private` and  `public_html`.
 
-2. Update database settings in `private/app/config/db.php`. Copy `db.php.example` to `db.php` and edit the defines; DO NOT track the db.php in the repo, as it contains secrets
+2. Place the `./` (repository root) folder as the web root on Hostinger (under the website `public_html`).
 
-3. Place the `./` (repository root) folder as the web root on Hostinger (under the website `public_html`).
+3. Copy `public_html\app\config\db.php.example` to `private\app\config\db.php` and edit the defines starting with `DB_...`; **DO NOT track** the db.php in the repo, as it contains secrets!
 
-4. If no user exists, the first login will automatically create an account from the credentials you enter.
+4. Create the `private/app/storage/uploads` directory.
+
+5. Import the schema into MySQL (substite with actual server values of DB_*):
+   - `mysql -u DB_USER -h DB_HOST -p DB_NAME < sql/schema.sql`!
+
+6. If no user exists, the first login will automatically create an account from the credentials you enter.
 
 ## Notes
 
