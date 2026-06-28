@@ -1,7 +1,11 @@
 # Secrets & local artifacts
 .env
+
+# avoid sql DB exports except the schema
 *.sql
 *.sql.gz
+# note that the controllers _assume_ this schema
+!sql/schema.sql
 app/storage/uploads/
 vendor/
 app/config/db.php

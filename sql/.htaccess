@@ -1,0 +1,3 @@
+# Block all public web browser access to this folder
+Order Deny,Allow
+Deny from all

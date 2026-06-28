@@ -5,7 +5,7 @@ define('DB_NAME', 'DB_NAME_HERE');
 define('DB_USER', 'DB_USER_HERE');
 define('DB_PASS', 'DB_PASS_HERE');
 
-define('UPLOAD_DIR', realpath(__DIR__ . '/../../app/storage/uploads'));
+define('UPLOAD_DIR', realpath(__DIR__ . '/../storage/uploads'));
 define('SITE_NAME', 'Chronika');
 
 try {
